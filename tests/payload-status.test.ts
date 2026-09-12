@@ -123,6 +123,7 @@ describe.each([
   "prefix-openai-codex-2",
   "openai-codex-2-suffix",
   "openai-codex-1.2",
+  "openai-codex-2\n",
 ])("malformed Codex provider %s", (provider) => {
   const model = { provider, id: "gpt-6-astra" };
   const defaults = cloneConfig();

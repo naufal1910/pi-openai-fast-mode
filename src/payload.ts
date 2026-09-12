@@ -8,7 +8,7 @@ import {
 
 const SUPPORTED_PROVIDER_SET = new Set<string>(SUPPORTED_PROVIDERS);
 // Numbered aliases are runtime provider IDs; persisted targets stay canonical.
-const NUMBERED_CODEX_PROVIDER = /^openai-codex-[0-9]+$/;
+const NUMBERED_CODEX_PROVIDER = /^openai-codex-[0-9]+(?![\s\S])/;
 
 function canonicalizeProvider(provider: string): string | undefined {
   if (SUPPORTED_PROVIDER_SET.has(provider)) return provider;
